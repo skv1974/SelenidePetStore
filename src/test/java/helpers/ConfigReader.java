@@ -1,4 +1,4 @@
-package com.helpers;
+package helpers;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -27,19 +27,16 @@ public class ConfigReader {
         return properties.getProperty("base.url");
     }
 
+    public String getBrowser() {
+        return properties.getProperty("default.browser");
+    }
+
+    public String getResolution() {
+        return properties.getProperty("resolution.window");
+    }
+
     public String getAuthToken() {
         return properties.getProperty("auth.token");
     }
 
-    public String getEndpointPutUser() {
-        return properties.getProperty("endpoint.putUser");
-    }
-
-    public String getEndpointGetUser() {
-        return properties.getProperty("endpoint.getUser");
-    }
-
-    public String getEndpointPostUser() {
-        return properties.getProperty("endpoint.postUser");
-    }
 }
